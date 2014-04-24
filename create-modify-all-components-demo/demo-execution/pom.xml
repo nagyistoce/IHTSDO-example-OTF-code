@@ -1,0 +1,74 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>gov.va</groupId>
+	<artifactId>demo-execution</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>Demo Executions</name>
+	<developers>
+		<developer>
+			<id>jefron</id>
+			<name>Jesse Efron</name>
+			<organization>Apelon, Inc</organization>
+			<organizationUrl>http://www.apelon.com</organizationUrl>
+			<roles>
+				<role>Architect</role>
+				<role>Technical Project Manager</role>
+				<role>Developer</role>
+			</roles>
+			<timezone>America/Chicago</timezone>
+		</developer>
+		<developer>
+			<id>kec</id>
+			<name>Keith Campbell</name>
+			<organization>Informatics, Inc.</organization>
+			<organizationUrl>http://www.informatics.com</organizationUrl>
+			<roles>
+				<role>Developer</role>
+				<role>Architect</role>
+			</roles>
+			<timezone>America/Los_Angeles</timezone>
+		</developer>
+	</developers>
+	<contributors>
+		<contributor>
+			<name>Susan Castillo</name>
+			<organization>Informatics, Inc.</organization>
+			<organizationUrl>http://www.informatics.com</organizationUrl>
+			<roles>
+				<role>Project Manager</role>
+			</roles>
+			<timezone>America/Los_Angeles</timezone>
+		</contributor>
+	</contributors>
+	<dependencies>
+		<dependency>
+			<groupId>gov.va</groupId>
+			<artifactId>demo-mojo</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<type>jar</type>
+		</dependency>
+	</dependencies>
+	<profiles>
+		<profile>
+			<id>creation</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>gov.va</groupId>
+						<artifactId>demo-mojo</artifactId>
+						<version>1.0-SNAPSHOT</version>
+						<executions>
+							<execution>
+								<phase>package</phase>
+								<goals>
+									<goal>creation</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+</project>
