@@ -4,10 +4,8 @@ import java.io.IOException;
 import java.util.UUID;
 
 import org.ihtsdo.otf.tcc.api.blueprint.TerminologyBuilderBI;
-import org.ihtsdo.otf.tcc.api.chronicle.ComponentChronicleBI;
 import org.ihtsdo.otf.tcc.api.concept.ConceptChronicleBI;
 import org.ihtsdo.otf.tcc.api.concept.ConceptVersionBI;
-import org.ihtsdo.otf.tcc.api.contradiction.ContradictionException;
 import org.ihtsdo.otf.tcc.api.coordinate.EditCoordinate;
 import org.ihtsdo.otf.tcc.api.coordinate.StandardViewCoordinates;
 import org.ihtsdo.otf.tcc.api.coordinate.ViewCoordinate;
@@ -38,7 +36,7 @@ public class AppInitializer {
 			
 			builder = new BdbTermBuilder(ec, vc);
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
+			// TODO (artf231871) Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
@@ -60,7 +58,7 @@ public class AppInitializer {
 			try {
 				store = new BdbTerminologyStore();
 			} catch (Exception e) {
-				// TODO Auto-generated catch block
+				// TODO (artf231871) Auto-generated catch block
 				e.printStackTrace();
 			}
 		}
@@ -73,7 +71,7 @@ public class AppInitializer {
 			try {
 				vc = StandardViewCoordinates.getSnomedStatedLatest();
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
+				// TODO (artf231871) Auto-generated catch block
 				e.printStackTrace();
 			}
 		}
@@ -114,7 +112,7 @@ public class AppInitializer {
 			ConceptChronicleBI reqCon = getDB().getConcept(conUid);
 			return reqCon.getVersion(getVC());
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
+			// TODO (artf231871) Auto-generated catch block
 			e.printStackTrace();
 		}
 		

@@ -55,7 +55,7 @@ public class ConceptPrinter {
 		} catch (IOException io) {
 			io.printStackTrace();
 		} catch (ContradictionException e) {
-			// TODO Auto-generated catch block
+			// TODO (artf231874) Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
@@ -308,7 +308,7 @@ public class ConceptPrinter {
 				String s = spec.getDescription();
 				System.out.println(s);
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
+				// TODO (artf231874) Auto-generated catch block
 				e.printStackTrace();
 			}
 		}
